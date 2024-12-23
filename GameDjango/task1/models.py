@@ -1,10 +1,11 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Buyer(models.Model):
     name = models.CharField(max_length=30, unique=True)
     balance = models.DecimalField(max_digits=10, decimal_places=2)
-    age = models.IntegerField()
+    age = models.IntegerField(validators=[MinValueValidator(5), MaxValueValidator(100)])
 
     def __str__(self):
         return self.name
