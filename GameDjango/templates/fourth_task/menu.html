@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May Sate</title>
+</head>
+<body>
+    <header>
+        {% block pagemane %}
+        <div style="margin:0 auto; border:2px #00db07 solid; width:700px;">
+            <h1 style="display:inline-block;">&ensp;{{namepage}}</h1>
+            <h2 style="display:inline-block;  text-align: center; color: #F00;">
+                &emsp;&emsp;&emsp;pagemane
+            </h2>
+        </div>
+        {% endblock %}
+    </header>
+    <br /><br />
+    <nav>
+        {% block menu %}
+        <div style="margin:0 auto; border:2px #00db07 solid; width:700px;">
+            &ensp; <a href="/platform/"> Главная</a><br>
+            &ensp; <a style="display:inline-block;" href="/platform/games/"> Магазин</a>
+            <h2 style="display:inline-block; text-align: center; color:#F00;">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;menu
+            </h2><br>
+            &ensp; <a href="/platform/cart/">Корзина</a>
+
+        </div>
+        {% endblock menu %}
+    </nav>
+    <br /><br />
+    <main>
+        {% block content %}
+            <h2 style="margin:0 auto; text-align: center; border:2px #00db07 solid; width:700px; color: #F00;">
+                &emsp;&emsp;&emsp;&emsp;content
+            </h2>
+        {% endblock content %}
+    </main>
+
+</body>
+</html>
