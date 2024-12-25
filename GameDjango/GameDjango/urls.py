@@ -21,7 +21,8 @@ from task1.views import (task_platform,
                          task_games,
                          task_cart,
                          sign_up_by_django,
-                         sign_up_by_html
+                         sign_up_by_html,
+                         news_task
                          )
 
 
@@ -31,8 +32,10 @@ urlpatterns = [
     path('platform/', task_platform),
     path('platform/games/', task_games),
     path('platform/cart/', task_cart),
+    path('platform/news/', news_task),
     path('django_form/', sign_up_by_django),
     path('html_form/', sign_up_by_html),
+
 ]
 
 
